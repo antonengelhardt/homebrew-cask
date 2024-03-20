@@ -7,15 +7,15 @@ on:
         description: Custom list of casks to livecheck and bump if outdated
         required: false
   schedule:
-    # Every 3 hours 23 minutes past the hour
-    - cron: "23 */3 * * *"
+    # Every 2 hours past the hour
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: read
 
 jobs:
   autobump:
-    if: github.repository == 'Homebrew/homebrew-cask'
+    if: github.repository == 'antonengelhardt/homebrew-cask'
     runs-on: macos-latest
     steps:
       - name: Set up Homebrew
@@ -29,7 +29,7 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'antonengelhardt' }}
 
       - name: Get list of autobump casks
         id: autobump
