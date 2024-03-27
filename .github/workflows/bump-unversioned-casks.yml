@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - .github/workflows/bump-unversioned-casks.yml
-  schedule:
-    - cron: "*/30 * * * *"
+  # schedule:
+  #   - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       clear_cache:

@@ -11,8 +11,8 @@ on:
       - closed
       - labeled
       - unlabeled
-  schedule:
-    - cron: '30 */3 * * *' # every 3 hours (30 minutes past the hour)
+  # schedule:
+  #   - cron: '30 */3 * * *' # every 3 hours (30 minutes past the hour)
 
 permissions:
   contents: read
