@@ -1,9 +1,10 @@
 cask "krisp" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "arm", intel: "64"
 
-  version "2.33.4"
-  sha256 arm:   "da3224a99296ff78648809ed98db6c9c083764f5e2bd1d71e8e2c91c18a6c05f",
-         intel: "81d41d89ddcbbc65137eb3c88096293c6c78662a5db5df75704aa69c0579e5fd"
+  version "2.37.4"
+  sha256 arm:   "12ff5f214d4bacbfba9574e355625d92e35512badef0de2970dad11866d9b881",
+         intel: "2eac045bd43b0f9ffa8f34817ccafceb8fe4cf325e9858310fcf58a181f61ec6"
 
   url "https://cdn.krisp.ai/mp/#{version}/mac/Krisp_#{version}_#{arch}.pkg"
   name "Krisp"
@@ -11,8 +12,9 @@ cask "krisp" do
   homepage "https://krisp.ai/"
 
   livecheck do
-    url "https://whatsnew.krisp.ai"
-    regex(/krisp\sv?(\d+(?:\.\d+)+)/i)
+    url "https://download.krisp.ai/mac?package=package_#{livecheck_arch}"
+    regex(%r{/Krisp[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg}i)
+    strategy :header_match
   end
 
   auto_updates true

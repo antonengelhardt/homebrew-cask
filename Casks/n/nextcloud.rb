@@ -10,8 +10,8 @@ cask "nextcloud" do
     depends_on macos: ">= :mojave"
   end
   on_monterey :or_newer do
-    version "3.12.1"
-    sha256 "6ac78e22c57c13884328f06deded69c75a157dad2f4349eb50b283b970bbf3fa"
+    version "3.13.0"
+    sha256 "c6aace27190509071337b3746448d3f39ce7faefe8fdf25431975a3018b396cd"
 
     livecheck do
       url :url
@@ -38,9 +38,10 @@ cask "nextcloud" do
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
-  uninstall quit:    "com.nextcloud.desktopclient",
-            pkgutil: "com.nextcloud.desktopclient",
-            delete:  "/Applications/Nextcloud.app"
+  uninstall launchctl: "com.nextcloud.desktopclient",
+            quit:      "com.nextcloud.desktopclient",
+            pkgutil:   "com.nextcloud.desktopclient",
+            delete:    "/Applications/Nextcloud.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",

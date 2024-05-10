@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "7.8.1,741"
-  sha256 "3d50eb4bdbf546d41de913d33c644fe2eeda8b5ec51b7cf6251df8167aebac6a"
+  version "7.13,777"
+  sha256 "70d93201c657645761a66ca436908dcb6d4ae73247c74c0475a178116bf952b6"
 
   url "https://stickytimers.app/macwhisper/MacWhisper-#{version.csv.second}.zip",
       verified: "stickytimers.app/macwhisper/"
@@ -30,6 +30,7 @@ cask "macwhisper" do
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper",
     "~/Library/HTTPStorages/com.goodsnooze.MacWhisper.binarycookies",
     "~/Library/Preferences/com.goodsnooze.MacWhisper.plist",
+    "~/Library/Saved Application State/com.goodsnooze.MacWhisper.savedState",
     "~/Library/WebKit/com.goodsnooze.MacWhisper",
   ]
 end

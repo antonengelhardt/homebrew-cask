@@ -1,11 +1,11 @@
 cask "kdenlive" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "24.02.0"
-  sha256 arm:   "5304529de58351b1159708f1cf005effd5f7102daf78a493fea1055be3c8d7a6",
-         intel: "4b6847ec12c82cf05bd239a221e98baac8baa6b33afa12f84630b12f8e62a3ec"
+  version "24.02.2"
+  sha256 arm:   "da1204e751b425d99a0d876fe77f1793a244a9770143eb140385075b5afe4dca",
+         intel: "4238da444082fb971ec23964326463d6aa05bafb63770c6caa17d0044dda9413"
 
-  url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}_A-#{arch}.dmg",
+  url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}-#{arch}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
   name "Kdenlive"
   desc "Free and Open Source Video Editor"
@@ -13,7 +13,7 @@ cask "kdenlive" do
 
   livecheck do
     url "https://kdenlive.org/en/download/"
-    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)_A-#{arch}.dmg/i)
+    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"

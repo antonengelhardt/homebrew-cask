@@ -28,9 +28,9 @@ cask "docker" do
     depends_on macos: :big_sur
   end
   on_monterey :or_newer do
-    version "4.28.0,139021"
-    sha256 arm:   "bbea580cbda59233c620a258e4a27369e04d5068735a087b8e13622d5e69fcd5",
-           intel: "2bd6e03121d608dad89261ca14f6e495fdcca97e36231b43da2d7a762047df9d"
+    version "4.30.0,149282"
+    sha256 arm:   "558dfeee76467fafc44eff1c2c15e63543d11a363239b3de025ebf644dd5f3d6",
+           intel: "f1e1af1b86d02c38e7aa80ee1563a86213f1afabfe31b44e0e85b8b1936aeef1"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -63,23 +63,23 @@ cask "docker" do
   ]
 
   app "Docker.app"
-  binary "Docker.app/Contents/Resources/bin/com.docker.cli",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.cli",
          target: "/usr/local/bin/com.docker.cli"
-  binary "Docker.app/Contents/Resources/bin/docker",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
-  binary "Docker.app/Contents/Resources/bin/docker-compose",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-compose",
          target: "/usr/local/bin/docker-compose"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-desktop",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
          target: "/usr/local/bin/docker-credential-ecr-login"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
          target: "/usr/local/bin/docker-credential-osxkeychain"
-  binary "Docker.app/Contents/Resources/bin/docker-index",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-index",
          target: "/usr/local/bin/docker-index"
-  binary "Docker.app/Contents/Resources/bin/hub-tool",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/hub-tool",
          target: "/usr/local/bin/hub-tool"
-  binary "Docker.app/Contents/Resources/bin/kubectl",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
@@ -125,6 +125,8 @@ cask "docker" do
         "~/.docker",
         "~/Library/Application Scripts/com.docker.helper",
         "~/Library/Application Scripts/group.com.docker",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.docker.helper.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dockerdesktop.sfl*",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
         "~/Library/Caches/com.docker.docker",

@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.3.12"
-  sha256 "2324542777f00bcbde8c2e1593c4ab2c1b0c6024e09c105cee982ecc2ed41876"
+  version "1.4.18"
+  sha256 "c1b6a551d27827a3e742ccea62c08786aebdb2dc9c19aacf942c3a311a9ff062"
 
   url "https://a11.gdl.netease.com/MuMuPlayerPro-v#{version}.dmg",
       verified: "a11.gdl.netease.com/"
@@ -26,7 +26,7 @@ cask "mumuplayer" do
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
 
-  app "MuMuPlayer.app"
+  app "MuMuLauncher.app"
 
   zap trash: [
     "~/Library/Application Scripts/*.group.com.netease.mumu.nemux",

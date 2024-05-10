@@ -1,9 +1,9 @@
 cask "keet" do
   arch arm: "Apple-Silicon", intel: "Intel"
 
-  version "2.0.0"
-  sha256  arm:   "5a3a5abde40125e3546885b7332598c62fd703d1fabd5d075ed498d95983ab69",
-          intel: "1cbe7b4d36f114ba6ca2eef9b657ef6177d098189cc0c1b4d62e14d4a96031c9"
+  version "2.2.0"
+  sha256  arm:   "da5824aa3ed5e30bcd745039d4a9b1bff7bce421ccc771a250de5de3ffe914e7",
+          intel: "66813488b4f320fae3590dc5d8e2a07050dbd3900808a3c87eea4227ab0063e8"
 
   url "https://keet.io/downloads/#{version}/Keet-#{arch}.dmg"
   name "keet"
@@ -15,5 +15,14 @@ cask "keet" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "Keet.app"
+
+  zap trash: [
+    "~/Library/Application Support/pear",
+    "~/Library/Application Support/pear-runtime",
+    "~/Library/Saved Application State/io.keet.app.savedState",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "streammusic" do
-  version "1.2.6"
-  sha256 "062828b65cdd3ace4eade7aa94a5a0395c75157a69d133fa07df4ff589184b78"
+  version "1.2.8"
+  sha256 "318d33d842ae0db2fa7f4ef46a273085357d59e8f6bc17170db5671c819d3cd5"
 
   url "https://oss.aqzscn.cn/stream-music/versions/#{version}/%E9%9F%B3%E6%B5%81v#{version}.dmg"
   name "StreamMusic"
@@ -8,7 +8,7 @@ cask "streammusic" do
   homepage "https://www.aqzscn.cn/"
 
   livecheck do
-    url "https://www.aqzscn.cn/archives/stream-music-versions"
+    url "https://music.aqzscn.cn/docs/versions/latest"
     regex(/href=.*v?(\d+(?:\.\d+)+(?:\.\d+)+)\.dmg/i)
   end
 

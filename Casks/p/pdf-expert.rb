@@ -1,6 +1,6 @@
 cask "pdf-expert" do
-  version "3.9.2,1038"
-  sha256 "a84b8293bac27319ae7d112d203d79b7f590eba4fcd83904e60b2bfd2aae5e21"
+  version "3.10.1,1044"
+  sha256 "6c2fc29d503b97cef8b263ecf5c5fa95c2d2d4976509ffb796968e56e328652b"
 
   url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
   name "PDF Expert"
@@ -13,7 +13,7 @@ cask "pdf-expert" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/pdf-expert-beta"
+  conflicts_with cask: "pdf-expert@beta"
   depends_on macos: ">= :monterey"
 
   app "PDF Expert.app"

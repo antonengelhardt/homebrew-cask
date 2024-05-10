@@ -1,9 +1,9 @@
 cask "chromedriver" do
   arch arm: "arm64", intel: "x64"
 
-  version "123.0.6312.58"
-  sha256 arm:   "4ccade08517d2e8fbd832ee4cd959df4c8dea740986b70b19f892bf413537641",
-         intel: "c912db7b7c65d0bfcf7d17150782c0e89783bcba60521b4a66201fc81daffd91"
+  version "124.0.6367.201"
+  sha256 arm:   "14ed249dc00f8ff701c2518dd91745191ec19f9a4acd34657f6210e36da69b97",
+         intel: "8e75a61fa333a99cf32006e5bc916fe632852762c82f21b2f9e3aa6fab169967"
 
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
@@ -19,7 +19,7 @@ cask "chromedriver" do
     end
   end
 
-  conflicts_with cask: "chromedriver-beta"
+  conflicts_with cask: "chromedriver@beta"
 
   binary "chromedriver-mac-#{arch}/chromedriver"
 

@@ -1,6 +1,6 @@
 cask "monal" do
-  version "895"
-  sha256 "dcf4e6c0a21ee1b14a295d057143f94bc761a4cd32fe63714d30defe9bb7c969"
+  version "903"
+  sha256 "7c383205a2f8b8fc613679742c81b175849f238b6a64b95352321f70ba48a497"
 
   url "https://downloads.monal-im.org/monal-im/stable/macOS/Monal-#{version}.zip"
   name "Monal"
@@ -12,7 +12,7 @@ cask "monal" do
     regex(/^(\d+)$/i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/monal-beta"
+  conflicts_with cask: "monal@beta"
   depends_on macos: ">= :catalina"
 
   app "Monal.app"

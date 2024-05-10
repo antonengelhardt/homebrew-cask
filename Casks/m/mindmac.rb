@@ -1,6 +1,6 @@
 cask "mindmac" do
-  version "1.9.0"
-  sha256 "70c05f7fdd94ba3882ebc2d2e060946e322000bf1e9f7976ece31672a539dda3"
+  version "1.9.14"
+  sha256 "ef8c458467baaec50baf5f8570bb2429225d45dccbd3e4f8cf4c3246f815479c"
 
   url "https://github.com/MindMacApp/MindMac/releases/download/#{version}/MindMac_#{version}.dmg",
       verified: "github.com/MindMacApp/MindMac/"
@@ -21,7 +21,13 @@ cask "mindmac" do
     "~/Library/Application Support/app.mindmac.macos",
     "~/Library/Application Support/MindMac",
     "~/Library/Caches/app.mindmac.macos",
+    "~/Library/Caches/com.crashlytics.data/app.mindmac.macos",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/app.mindmac.macos",
+    "~/Library/Containers/org.sparkle-project.Downloader/Data/Library/Caches/app.mindmac.macos",
+    "~/Library/HTTPStorages/app.mindmac.macos",
+    "~/Library/HTTPStorages/app.mindmac.macos.binarycookies",
     "~/Library/Preferences/app.mindmac.macos.plist",
     "~/Library/Saved Application State/app.mindmac.macos.savedState",
+    "~/Library/WebKit/app.mindmac.macos",
   ]
 end

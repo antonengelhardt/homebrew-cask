@@ -20,9 +20,9 @@ cask "slack" do
     end
   end
   on_big_sur :or_newer do
-    version "4.37.94"
-    sha256 arm:   "8cc96cf8dcf175cdd59d86a3aadea30546dce92be113611d80fdcb45f72b043e",
-           intel: "afc80c3c7104c78e11ac32e4dfedd4e296f2e261ed460aa8761561774eda6707"
+    version "4.38.121"
+    sha256 arm:   "454ec8969965112d1a14f05ecc8e001e2d05d93974794850394da8730f493f98",
+           intel: "22066b4388d188a5e36125e8eeb96e4052f98abf5d02e0c9d6c124f491341af0"
 
     livecheck do
       url "https://slack.com/ssb/download-osx"
@@ -37,7 +37,7 @@ cask "slack" do
   homepage "https://slack.com/"
 
   auto_updates true
-  conflicts_with cask: "slack-beta"
+  conflicts_with cask: "slack@beta"
   depends_on macos: ">= :mojave"
 
   app "Slack.app"
@@ -48,18 +48,15 @@ cask "slack" do
     "~/Library/Application Scripts/com.tinyspeck.slackmacgap",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl*",
     "~/Library/Application Support/Slack",
-    "~/Library/Caches/com.tinyspeck.slackmacgap",
-    "~/Library/Caches/com.tinyspeck.slackmacgap.ShipIt",
-    "~/Library/Containers/com.tinyspeck.slackmacgap",
-    "~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService",
+    "~/Library/Caches/com.tinyspeck.slackmacgap*",
+    "~/Library/Containers/com.tinyspeck.slackmacgap*",
     "~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies",
     "~/Library/Group Containers/*.com.tinyspeck.slackmacgap",
     "~/Library/Group Containers/*.slack",
     "~/Library/HTTPStorages/com.tinyspeck.slackmacgap*",
     "~/Library/Logs/Slack",
     "~/Library/Preferences/ByHost/com.tinyspeck.slackmacgap.ShipIt.*.plist",
-    "~/Library/Preferences/com.tinyspeck.slackmacgap.helper.plist",
-    "~/Library/Preferences/com.tinyspeck.slackmacgap.plist",
+    "~/Library/Preferences/com.tinyspeck.slackmacgap*",
     "~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState",
     "~/Library/WebKit/com.tinyspeck.slackmacgap",
   ]

@@ -1,9 +1,9 @@
 cask "confluent-cli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.54.0"
-  sha256 arm:   "147c2cfd6367655163a208446a74343d57ce51bf5d489d0bd378e32bce15b3c6",
-         intel: "ba8baadd8dd9932c7862f09c98e4589a107d80a14dd05e23a4cd9405e154360f"
+  version "3.61.0"
+  sha256 arm:   "12a61efb5e6fb8ba08b2d9175fb9d6acfacf2c8410ecbe016ac33357f24261d6",
+         intel: "ed26652129f8237be162f53ddedbf911f8f77d75b78dea30177f72c51bcde8c7"
 
   url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_darwin_#{arch}.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
@@ -13,7 +13,7 @@ cask "confluent-cli" do
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/confluent.cloud?prefix=confluent-cli/archives/&delimiter=/"
-    regex(%r{<Prefix>confluent-cli/archives/(\d+(?:\.\d+)+)/</Prefix>}i)
+    regex(%r{<Prefix>confluent[._-]cli/archives/v?(\d+(?:\.\d+)+)/</Prefix>}i)
   end
 
   binary "confluent/confluent"

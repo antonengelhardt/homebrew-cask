@@ -1,15 +1,15 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.29.1,2403027twmz0d1t"
-  sha256 arm:   "3944737f49a38fd2862df35096cafee594be10e91ed449fbc1f50fcaaa33eac8",
-         intel: "c91036c0e83797fe056ab04f7f7f8cb3e8d0029b98860ce8d615e536c1a6008c"
+  version "0.33.2,240510dwmw395qe"
+  sha256 arm:   "17f2cbc78d8572251712250a35f11570d2a734b005a02bb8eccdc8db8ccf74ad",
+         intel: "7f36c7ff5a56893880dd3af8731adb78fe5cc3dc72a87a47638501145bdcfcc2"
 
   url "https://download.todesktop.com/230313mzl4w4u92/Cursor%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/230313mzl4w4u92/"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
-  homepage "https://www.cursor.so/"
+  homepage "https://cursor.sh/"
 
   livecheck do
     url "https://download.todesktop.com/230313mzl4w4u92/latest-mac.yml"

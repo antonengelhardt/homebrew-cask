@@ -1,6 +1,6 @@
 cask "ddpm" do
-  version "1.3.0.0026"
-  sha256 "fad4c289349f0d6e6b55af535f7494dcba1762fffddaa089d75065f9dd4ccdd3"
+  version "1.3.0.0037"
+  sha256 "63ea758179616ff4519fcb0766dd2d5421e2defc47bd95a92b6515d5343dbcb4"
 
   url "https://www.delldisplaymanagermac.com/DDPM/DDPMv#{version}.zip",
       verified: "delldisplaymanagermac.com/"

@@ -1,9 +1,9 @@
 cask "utools" do
   arch arm: "-arm64"
 
-  version "4.4.1"
-  sha256 arm:   "2a6899fa0f36461e9c0ab60091fe9d53039754af22499766c3eac3be56f8da04",
-         intel: "f2426da2a666301171019e3c8bb0784285207d3af5b05455dae31c8e10927b8e"
+  version "5.1.0"
+  sha256 arm:   "ca5113af6dc08fbe61494831ae48e91163864808007575ec26e4f1c5c7d473c5",
+         intel: "734cb7ff4109af0ad3d55dc0df25dfa29e70d328d14a9828cbd2b6d02743244a"
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",
       verified: "publish.u-tools.cn/"
@@ -12,8 +12,8 @@ cask "utools" do
   homepage "https://u.tools/index.html"
 
   livecheck do
-    url :homepage
-    regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+    url "https://u.tools/download/"
+    regex(/uTools[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "uTools.app"

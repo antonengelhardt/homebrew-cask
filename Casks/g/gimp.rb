@@ -1,9 +1,9 @@
 cask "gimp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.10.36"
-  sha256 arm:   "1d7c3bb07cce6d51fe6d5cd42653e229ed5ac4e13eea063cd4da8e8e9301eb39",
-         intel: "9e6e4f9572d1509cbb7f442b01232428adbfa45cb99f92a6d497b2f25ae9327e"
+  version "2.10.38"
+  sha256 arm:   "509d544470e61570a645940ebc1229145abdf995829a8ef0f5296c7408e9a2d6",
+         intel: "cf0c79201f54b0c8978ba43806199f0d85bb0ac8db3e77f9dc4f6f4393a9d836"
 
   url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version}-#{arch}.dmg"
   name "GIMP"
@@ -16,7 +16,8 @@ cask "gimp" do
     regex(%r{href=.*?/gimp[._-]v?(\d+(?:\.\d+)+(-\d)?)[._-]#{arch}\.dmg}i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/gimp-dev"
+  conflicts_with cask: "gimp@dev"
+  depends_on macos: ">= :high_sierra"
 
   app "GIMP.app"
   shimscript = "#{staged_path}/gimp.wrapper.sh"

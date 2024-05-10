@@ -1,12 +1,13 @@
 cask "kitty" do
-  version "0.33.0"
-  sha256 "c9dd9ee4cbece3d172488a4d5f1dd61df83f4ff559de7adf4a35e17c5cf7b6c5"
+  version "0.34.1"
+  sha256 "4e04f813765bf57f3914d992f039d54a97788bcb3d120722d7369442a1e98bd3"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   name "kitty"
   desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"
 
+  conflicts_with cask: "kitty@nightly"
   depends_on macos: ">= :sierra"
 
   app "kitty.app"

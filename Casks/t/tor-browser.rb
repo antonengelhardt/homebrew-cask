@@ -1,6 +1,6 @@
 cask "tor-browser" do
-  version "13.0.12"
-  sha256 "d88863ef3de741ce03ba5c71c17fb699196f5c40da42e0d6a2522c03a2231e40"
+  version "13.0.14"
+  sha256 "81b7c075cbcc293024938e75bf69b20f3586debb441ced9ac1f5bea0c110e2b6"
 
   url "https://archive.torproject.org/tor-package-archive/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
@@ -13,7 +13,7 @@ cask "tor-browser" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/tor-browser-alpha"
+  conflicts_with cask: "tor-browser@alpha"
   depends_on macos: ">= :sierra"
 
   app "Tor Browser.app"

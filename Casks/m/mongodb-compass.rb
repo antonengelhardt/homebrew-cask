@@ -1,9 +1,9 @@
 cask "mongodb-compass" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.42.2"
-  sha256 arm:   "ffac03f77a5d238194cd538b8b72f41cb1b0d09647ed4a8ce278cf08e40b333b",
-         intel: "39afaf799ff790e0c2752e97b4a5cc3234e85cfc1f39dda7bc7fa54691a3e419"
+  version "1.43.0"
+  sha256 arm:   "7cb539001c9d1dca83ee7240f1ad3704f8015726cfca3ce6b3ca6ac62de9c898",
+         intel: "39859079985ebb04109354a381cd290dbce56ae5943e05c89a6823c9653aab66"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass"
@@ -16,6 +16,7 @@ cask "mongodb-compass" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "MongoDB Compass.app"
 

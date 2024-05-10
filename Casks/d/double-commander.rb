@@ -1,9 +1,9 @@
 cask "double-commander" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.1.11"
-  sha256 arm:   "92498f714f1ea3fd6428e92485730111c6ad6a2f5061373284927107cfa8ae0e",
-         intel: "a857c96c2ee5b7cb78d8b2cb95db7e38b3a5ede48ce127f73090f4346f2ab60b"
+  version "1.1.14"
+  sha256 arm:   "ef4c4008ad4be13acdc855524c327a7790eccc4d78e01e851a5cbc527586768f",
+         intel: "dd00f3c6035294d4a31422379cb00470f609b86cd9c8d449d686d3e9f35f4ecd"
 
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"

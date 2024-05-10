@@ -1,6 +1,6 @@
 cask "guilded" do
-  version "1.0.9236953"
-  sha256 "8cf047c746fdd5c3fe41d8289ae7940a1e03d38b98bf7c49536c71ec6f39b459"
+  version "1.0.9256462"
+  sha256 "5d5312ab5eac9106d329689dfbdea81593ee0e999c689929629efa8d415fc546"
 
   url "https://www.guilded.gg/AppBuilds/mac/Guilded-#{version}-release.dmg"
   name "Guilded"
@@ -9,8 +9,8 @@ cask "guilded" do
 
   livecheck do
     url "https://www.guilded.gg/AppBuilds/mac/release-mac.yml"
-    strategy :electron_builder do |data|
-      data["version"].tr("-release", "")
+    strategy :electron_builder do |yaml|
+      yaml["version"]&.sub(/[._-]release.*$/i, "")
     end
   end
 

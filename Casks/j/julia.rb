@@ -1,9 +1,9 @@
 cask "julia" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.10.2"
-  sha256 arm:   "924899e14c1c63624a3872c8c3124a6bf0cb248a7d935b7da01714adb968db6f",
-         intel: "26b822154ae05f2c2b66d2b1538e1df86f1bb39967cbc9380a7f2271f5a677ce"
+  version "1.10.3"
+  sha256 arm:   "db2a42130135f2673f1c47a1add229ced85318a7d66cd844948839ae4c62f534",
+         intel: "c4d3076bc918b1300edc236f827bc49349a73f4ed577ec5a5e613410363af213"
 
   url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{arch.delete_prefix("x")}.dmg"
   name "Julia"
@@ -21,6 +21,7 @@ cask "julia" do
 
   zap trash: [
     "~/.julia",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.julia.sfl*",
     "~/Library/Logs/Julia",
     "~/Library/Preferences/com.github.Julia.plist",
     "~/Library/Preferences/julia.plist",

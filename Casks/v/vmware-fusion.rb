@@ -16,14 +16,7 @@ cask "vmware-fusion" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/vmware-fusion7",
-    "homebrew/cask-versions/vmware-fusion8",
-    "homebrew/cask-versions/vmware-fusion10",
-    "homebrew/cask-versions/vmware-fusion11",
-    "homebrew/cask-versions/vmware-fusion12",
-    "homebrew/cask-versions/vmware-fusion-tech-preview",
-  ]
+  conflicts_with cask: "vmware-fusion@preview"
   depends_on macos: ">= :monterey"
 
   app "VMware Fusion.app"

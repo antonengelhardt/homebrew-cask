@@ -1,5 +1,5 @@
 cask "cloudmounter" do
-  version "4.4"
+  version "4.5"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/cloudmounter/mac/download/cloudmounter.dmg",
@@ -18,6 +18,7 @@ cask "cloudmounter" do
   app "CloudMounter.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.cloudmounter.sfl*",
     "~/Library/Application Support/com.eltima.cloudmounter",
     "~/Library/Caches/com.eltima.cloudmounter",
     "~/Library/Logs/CloudMounter.log",

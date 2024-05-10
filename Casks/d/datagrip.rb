@@ -1,9 +1,9 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2023.3.4,233.14015.137"
-  sha256 arm:   "2dc136c60d6c4c2cc13dc2d426c564dd34e56625dfbfb84d1900b175ea5d6273",
-         intel: "730a1f17882432ad01b936a6d621c4c3acbfce0bd693b3ca4ee488182ab04d99"
+  version "2024.1.2,241.15989.49"
+  sha256 arm:   "583c32f39918681673028a20cb911a41fc4495cf44c151c0790594042ec9e160",
+         intel: "41a4dabdd2ad97387d806742c41b34e5a1544860c159f5d71c09b00a1e605356"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"

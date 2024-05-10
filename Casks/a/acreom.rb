@@ -1,9 +1,9 @@
 cask "acreom" do
   arch arm: "-arm64"
 
-  version "1.17.0"
-  sha256 arm:   "ce41b7396be543cff5f2918cd571ac081339f788f46b9421a09c3f24edd8ec96",
-         intel: "abadd61ac2b843895c8788ad2a0e4cc6d3f2d01f882f2df28675d53524f7ee51"
+  version "1.20.1"
+  sha256 arm:   "5b8df0a3e3fc149f3d954733e2544f0e54e6cc1e3c0c413a0e6f14f3400780cb",
+         intel: "8ba63c0321f8c6a62f57d9800ca60e39122cd1680fdcbdb370a33ebe2e6d6cc9"
 
   url "https://github.com/Acreom/releases/releases/download/v#{version}/acreom-#{version}#{arch}.dmg",
       verified: "github.com/Acreom/releases/"

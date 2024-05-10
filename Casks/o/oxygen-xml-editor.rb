@@ -1,6 +1,6 @@
 cask "oxygen-xml-editor" do
-  version "26.0,2024012406"
-  sha256 "4111e46c936b39de53f01d428d1117da136fa4e019257ea88b8e011ec8dc1bc4"
+  version "26.1,2024042206"
+  sha256 "b97217b262ec5c698c980f9fddbc74cf48d470a2b28a6afd927dc74e0036724d"
 
   url "https://archives.oxygenxml.com/Oxygen/Editor/InstData#{version.csv.first}/MacOSX/VM/oxygen-openjdk.dmg"
   name "oXygen XML Editor"

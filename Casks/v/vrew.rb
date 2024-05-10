@@ -1,6 +1,6 @@
 cask "vrew" do
-  version "1.16.0"
-  sha256 "e629566931d113f15fe9a7bcddc5cd42e9c1f6e66d9d260922c4f6dbc287dec3"
+  version "2.0.2"
+  sha256 "77054eb16fc56f25dd9e105403745f215f98ec44a7a3e62fa843108323bf8740"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
   name "Vrew"
@@ -12,10 +12,14 @@ cask "vrew" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Vrew.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.voyagerx.vrew.sfl*",
     "~/Library/Application Support/vrew",
     "~/Library/Preferences/com.voyagerx.vrew.plist",
+    "~/Library/Saved Application State/com.voyagerx.vrew.savedState",
   ]
 end

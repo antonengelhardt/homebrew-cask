@@ -1,15 +1,15 @@
 cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
-  version "1.11.11"
-  sha256 arm:   "78e32f567b6014a6adbc6bf3318f9a1e81114fe97494d3cf829b9d7d38b3c8a4",
-         intel: "3b0ef1e5ab3a90127eb30750ff97fcf8ef2f99abde006c1faa57b93d0f2342c3"
+  version "1.11.13"
+  sha256 arm:   "b37e5ed36de03285f2052d0d6eb5f0c9b1e2fc70b6bc7052b655152be9103db1",
+         intel: "fdb7041268db1198d47ad75ecbedf0453bce26c440e2c4dbe568f18e164cd4e2"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
-  homepage "https://www.freeplane.org/wiki/index.php/Home"
+  homepage "https://docs.freeplane.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"

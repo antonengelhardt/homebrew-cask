@@ -1,6 +1,6 @@
 cask "mi" do
-  version "3.7.8"
-  sha256 "8273bdc6041cfca04ebe61b1bb47e816993c51449fbece79f80b312232aebb7a"
+  version "3.7.9"
+  sha256 "483d204dee40348490c8264b5c370ca6788d9e4250e4571fbdd47ded573421bd"
 
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   name "mi"
@@ -12,7 +12,7 @@ cask "mi" do
     strategy :sparkle, &:short_version
   end
 
-  conflicts_with cask: "mi-beta"
+  conflicts_with cask: "mi@beta"
   depends_on macos: ">= :high_sierra"
 
   app "mi.app"

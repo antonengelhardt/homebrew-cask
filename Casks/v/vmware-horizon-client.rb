@@ -1,33 +1,20 @@
 cask "vmware-horizon-client" do
-  version "2312-8.12.0-23149316,CART24FQ4_MAC_2312"
-  sha256 "f2d2b5fb6e70d1d8b67d13209fb9591bc326c8796e098bde6db514d0c6b18db4"
+  version "2312.2-8.12.2-23764102,CART25FQ1_MAC_2312.2"
+  sha256 "a1370fbda317f98c147b3a63bcaade2120ae40d20f220b419b76949b279bba65"
 
-  url "https://download3.vmware.com/software/#{version.csv.second}/VMware-Horizon-Client-#{version.csv.first}.dmg"
+  url "https://download3.omnissa.com/software/#{version.csv.second}/VMware-Horizon-Client-#{version.csv.first}.dmg",
+      verified: "download3.omnissa.com/software/"
   name "VMware Horizon Client"
   desc "Virtual machine client"
   homepage "https://www.vmware.com/"
 
+  # TODO: Once upstream completes migration to the "Broadcom Support Portal"
+  # workout an updated livecheck strategy
   livecheck do
-    url "https://customerconnect.vmware.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=desktop_end_user_computing&product=vmware_horizon_clients&version=horizon_8&dlgType=PRODUCT_BINARY"
+    url "https://maintenance.vmware.com/horizon-client-download.html"
     regex(%r{/([^/]+)/VMware[._-]Horizon[._-]Client[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
-    strategy :json do |json|
-      mac_json_info = json["dlgEditionsLists"]&.select { |item| item["name"].match(/mac/i) }&.first
-      api_item = mac_json_info["dlgList"]&.first
-      next if api_item.blank?
-
-      download_group = api_item["code"]
-      product_id = api_item["productId"]
-      pid = api_item["releasePackageId"]
-      next if download_group.blank? || product_id.blank? || pid.blank?
-
-      url = "https://customerconnect.vmware.com/channel/public/api/v1.0/dlg/details?locale=en_US&downloadGroup=#{download_group}&productId=#{product_id}&rPId=#{pid}"
-      download_item = Homebrew::Livecheck::Strategy.page_content(url)
-      next if download_item[:content].blank?
-
-      match = download_item[:content].match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

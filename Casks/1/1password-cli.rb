@@ -1,9 +1,9 @@
 cask "1password-cli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.26.0"
-  sha256 arm:   "3268c990b4e9368c5981b53f34e6ca94b4f762009811817e62a0c3a2d4b0f4c3",
-         intel: "2dac9d6fcf06adc7c0a0e82a4e655ab4582fc01822d39f0b3fa02d14fb1f7f8f"
+  version "2.28.0"
+  sha256 arm:   "8bedcb7276b41525afa323123e1416074e91f76449671d5b6b109ffc9acb8e2d",
+         intel: "683686aa023221e7ff59773878cbbdbfc1044036a66e8d41229c0d12ff80e038"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_darwin_#{arch}_v#{version}.zip",
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
@@ -16,7 +16,10 @@ cask "1password-cli" do
     regex(%r{href=.*?/op_apple_universal[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  conflicts_with cask: "1password-cli1"
+  conflicts_with cask: [
+    "1password-cli@1",
+    "1password-cli@beta",
+  ]
 
   binary "op"
 

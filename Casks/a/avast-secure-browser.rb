@@ -1,24 +1,30 @@
 cask "avast-secure-browser" do
-  version "122.0.5288.130"
-  sha256 :no_check
+  arch arm: "arm", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "-arm"
 
-  url "https://cdn-download.avastbrowser.com/AvastSecureBrowserSetup.pkg",
-      verified: "cdn-download.avastbrowser.com/"
+  on_arm do
+    version "123.0.5368.122"
+    sha256 "1c8bef88cbd2615a356be030137651cd4aec20c754075a385321d237e718a811"
+  end
+  on_intel do
+    version "123.0.5380.122"
+    sha256 "2469957b81f0ad0a1110cfba0b208a3d2196f63e5e334b2bfa5bbd60c01e2b12"
+  end
+
+  url "https://cdn-update.avast.securebrowser.com/browser/mac/#{arch}/#{version}/AvastSecureBrowser.dmg",
+      verified: "cdn-update.avast.securebrowser.com/"
   name "Avast Secure Browser"
   desc "Web browser focusing on privacy"
   homepage "https://www.avast.com/secure-browser#mac"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://update.avastbrowser.com/sparkle/browser#{livecheck_arch}/appcast.xml"
+    strategy :sparkle
   end
 
-  depends_on arch: :x86_64
+  auto_updates true
 
-  pkg "AvastSecureBrowserSetup.pkg"
-
-  uninstall quit:    "com.avast.browser",
-            pkgutil: "com.avast.browser"
+  app "Avast Secure Browser.app"
 
   zap trash: [
         "~/Library/Application Support/AVAST Software/Browser",

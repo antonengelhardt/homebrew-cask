@@ -1,6 +1,6 @@
 cask "macfuse" do
-  version "4.6.1"
-  sha256 "d0bce4a3b4a0ee5d3c63ef5f56e2acde1a2ecb3461db5e62e374b811bb0d467f"
+  version "4.7.1"
+  sha256 "12a4a011c7c6af3ac55d75fff16de8ef97c4e8d9b854b601709ce5316fa87c17"
 
   url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/osxfuse/"
@@ -14,7 +14,7 @@ cask "macfuse" do
   end
 
   auto_updates true
-  conflicts_with cask: "macfuse-dev"
+  conflicts_with cask: "macfuse@dev"
   depends_on macos: ">= :sierra"
 
   pkg "Extras/macFUSE #{version}.pkg"

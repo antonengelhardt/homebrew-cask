@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.84.0"
-  sha256 "c73a0f55b90cc10c9e9d9f2628c3d9df67da87716cf50769a0fdaca12d87dcd4"
+  version "1.86.1"
+  sha256 "6fc6a61a7e992cd751b506014277aa3079a2833a47e457221a565776d12c6b7d"
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}-universal.dmg",
       verified: "desktop-release.canva-deploy.com/"
@@ -22,8 +22,7 @@ cask "canva" do
     "~/Library/Application Support/Canva",
     "~/Library/Caches/com.canva.CanvaDesktop",
     "~/Library/Caches/com.canva.CanvaDesktop.ShipIt",
-    # `availablility` is misspelled upstream
-    "~/Library/LaunchAgents/com.canva.availablility-check-agent.plist",
+    "~/Library/LaunchAgents/com.canva.availability-check-agent.plist",
     "~/Library/Logs/Canva",
     "~/Library/Preferences/com.canva.CanvaDesktop.plist",
     "~/Library/Saved Application State/com.canva.CanvaDesktop.savedState",

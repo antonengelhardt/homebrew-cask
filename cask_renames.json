@@ -1,9 +1,11 @@
 {
   "ankerslicer": "ankermake",
+  "ankiapp-anki": "ankiapp",
   "autodesk-fusion360": "autodesk-fusion",
   "betterdummy": "betterdisplay",
   "clinq": "sipgate-clinq",
   "cloudapp": "zight",
+  "codewhisperer": "amazon-q",
   "cron": "notion-calendar",
   "emby-server": "embyserver",
   "epilogue-operator": "epilogue-playback",
@@ -13,6 +15,7 @@
   "hma-pro-vpn": "hma-vpn",
   "mat": "memoryanalyzer",
   "mouse-fix": "mac-mouse-fix",
+  "mpv": "stolendata-mpv",
   "mysteriumvpn": "mysteriumdark",
   "obsbot-webcam": "obsbot-center",
   "opal": "opal-composer",
@@ -22,5 +25,6 @@
   "streamlabs-obs": "streamlabs",
   "tea": "ossapp",
   "tibco-jaspersoft-studio": "jaspersoft-studio",
-  "tutanota": "tuta-mail"
+  "tutanota": "tuta-mail",
+  "vmware-fusion-tech@preview": "vmware-fusion@preview"
 }

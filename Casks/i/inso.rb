@@ -1,6 +1,6 @@
 cask "inso" do
-  version "8.6.1"
-  sha256 "ab76b4402fd04a205045f7c2b391a86739176f843ef28f81d95906a1a02a3063"
+  version "9.1.1"
+  sha256 "23bfded0fc2ff5fe4c47b986f1af17df683c358b13bc7d8188678fb795d811f9"
 
   url "https://github.com/Kong/insomnia/releases/download/lib%40#{version}/inso-macos-#{version}.zip",
       verified: "github.com/Kong/insomnia/"
@@ -16,7 +16,7 @@ cask "inso" do
     regex(/^lib@v?(\d{1,3}(?:\.\d+)+)$/i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/inso-beta"
+  conflicts_with cask: "inso@beta"
 
   binary "inso"
 
