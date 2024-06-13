@@ -96,16 +96,23 @@ jobs:
             echo '::warning::Removing Julia is no longer necessary.'
           fi
 
+          if ! rm /usr/local/share/man/man1/al.1 || \
+             ! sudo rm /etc/paths.d/mono-commands || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
+            echo '::warning::Uninstalling Mono is no longer necessary.'
+          fi
+
           if ! rm /usr/local/bin/dotnet; then
-            echo '::warning::Removing `dotnet` symlink is no longer necessary.'
+            echo "::warning::Removing \`dotnet\` symlink is no longer necessary."
           fi
 
           if ! rm /usr/local/bin/pod; then
-            echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
+            echo "::warning::Removing \`cocoapods\` symlink is no longer necessary."
           fi
 
           if ! rm /usr/local/bin/chromedriver; then
-            echo '::warning::Removing `chromedriver` symlink is no longer necessary.'
+            echo "::warning::Removing \`chromedriver\` symlink is no longer necessary."
           fi
 
           brew unlink python && brew link --overwrite python
@@ -226,12 +233,6 @@ jobs:
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
         run: brew uninstall --cask '${{ matrix.cask.path }}'
         if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
-        timeout-minutes: 30
-
-      - name: Uninstall formula dependencies
-        run: |
-          brew uninstall --formula ${{ join(fromJSON(steps.info.outputs.formula_dependencies), ' ') }}
-        if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_dependencies)) != ''
         timeout-minutes: 30
 
       - name: Uninstall cask dependencies

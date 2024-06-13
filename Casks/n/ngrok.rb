@@ -2,12 +2,12 @@ cask "ngrok" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "3.9.0,3N6KtVt2Euc,a"
-    sha256 "9db7f70531e8f12735f0b264d379be07c1094e8392bfdb885f5a5fbce50d54ef"
+    version "3.10.1,mGPzPfBVNhS,a"
+    sha256 "4b5f76cad43e1aa7941abf1f5222cbfd4a347f2ef606e5a1d6f14c7f72aed105"
   end
   on_intel do
-    version "3.9.0,fcCEuUCV2S4,a"
-    sha256 "a40be38bcb38df20cf0e8099d8fe20672d37621108836674eaed0f8c65f0855d"
+    version "3.10.1,8RiZrogbZ8F,a"
+    sha256 "023869f3a3a82c3325c717b1e825a95083ce303e9fcd9ca9d05a3504043bd35c"
   end
 
   url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-stable-darwin-#{arch}.zip",

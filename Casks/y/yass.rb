@@ -1,13 +1,13 @@
 cask "yass" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "1.9.5"
-  sha256 arm:   "ee5b936d9799c116600e0ffde9d4b91bfc8ed263adef8d4be32c7715c27acf3a",
-         intel: "18e5e88dc23e9da472c49d20a7949dea378609bee84b466bf484a90527a1e179"
+  version "1.11.1"
+  sha256 arm:   "e6067281fd68b885891b96ea991b393dd64d6c2817d0d79581500df779bf1d1c",
+         intel: "5a47d45c092125ef01248748221488b619717f2baa68f50c83871da1072d78ca"
 
   url "https://github.com/Chilledheart/yass/releases/download/#{version}/yass-macos-release#{arch}-#{version}.dmg"
-  name "YASS"
-  desc "Yet Another Shadow Socket"
+  name "Yet Another Shadow Socket"
+  desc "Lightweight and efficient, socks/http forward proxy"
   homepage "https://github.com/Chilledheart/yass"
 
   livecheck do

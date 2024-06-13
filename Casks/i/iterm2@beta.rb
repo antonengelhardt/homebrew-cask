@@ -1,12 +1,12 @@
 cask "iterm2@beta" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3.5.0beta25"
-  sha256 "247b3a7e4126389f0487e57332f38b02313443e3167de09c121762a9516efed7"
+  version "3.5.1beta4"
+  sha256 "71e892c8ee07eb45d3275ece652c358c9318b341cc29e2ac69ab8b8062c6d24a"
 
   url "https://iterm2.com/downloads/beta/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
-  homepage "https://www.iterm2.com/"
+  homepage "https://iterm2.com/"
 
   livecheck do
     url "https://iterm2.com/appcasts/testing_modern.xml"

@@ -1,9 +1,9 @@
 cask "popclip" do
-  version "2024.3.2"
-  sha256 "9c353dcc0365e2bac181eb60970042635348f336555f856361aa34682da846c2"
+  version "2024.5.2"
+  sha256 "7dffdff233d684903589531b3e424088cac22816da3470f4b941383f46d5d2cc"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip",
-      verified: "pilotmoon.com/"
+      verified: "pilotmoon.com/downloads/"
   name "PopClip"
   desc "Used to access context-specific actions when text is selected"
   homepage "https://www.popclip.app/"
@@ -13,6 +13,7 @@ cask "popclip" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "PopClip.app"

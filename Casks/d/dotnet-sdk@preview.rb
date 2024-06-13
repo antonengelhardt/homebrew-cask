@@ -2,18 +2,18 @@ cask "dotnet-sdk@preview" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "8.0.204,a1b04e7e-464d-45f6-ac93-f8901c46c247,7acd4fa3f321aaec4598a1492cc745c6"
-    sha256 "9c41150210de26549d520cb274cdc4b6db24ee7168a150b0465adf18828ee348"
+    version "9.0.100-preview.5.24307.3,4138605e-d1df-4672-b024-862b8b1bc4dc,bbf19075238cb836aa0483014f8174e3"
+    sha256 "f42fe838b24c13587719ecbc8267d430c4361c3d71038761779ca619378c52d4"
   end
   on_intel do
-    version "8.0.204,7bcf1329-6691-45e9-8fdd-96c65bcabd1f,cb618d2620974fc029e4f758eb267452"
-    sha256 "cfc35a77cb675ebeb31570b723b58514f68c0034bb4194d7b40523cd2b819455"
+    version "9.0.100-preview.5.24307.3,f4139839-15fa-4ef6-a1b0-fb77ee467b2e,7529958cc121871a79d3da1a0f851333"
+    sha256 "2d9d3f027b038dbeb7ec2a4ffd15e43b979d691d9155b79d0019fdb1dfca02bd"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   name ".NET SDK"
   desc "Developer platform"
-  homepage "https://www.microsoft.com/net/core#macos"
+  homepage "https://dotnet.microsoft.com/en-us/"
 
   livecheck do
     url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"

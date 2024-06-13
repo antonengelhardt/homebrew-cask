@@ -4,10 +4,10 @@ cask "spotify" do
   sha256 :no_check
 
   on_arm do
-    version "1.2.37.701,e66eb7bc,1226"
+    version "1.2.39.578,0ea3f38b,108"
   end
   on_intel do
-    version "1.2.37.701,e66eb7bc,1227"
+    version "1.2.39.578,0ea3f38b,107"
   end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
@@ -27,7 +27,7 @@ cask "spotify" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Spotify.app"
 

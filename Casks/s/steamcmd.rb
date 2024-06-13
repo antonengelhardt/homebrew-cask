@@ -1,5 +1,5 @@
 cask "steamcmd" do
-  version "1714855729"
+  version "1716584438"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
@@ -9,7 +9,7 @@ cask "steamcmd" do
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"
 
   livecheck do
-    url "http://media.steampowered.com/client/steam_cmd_osx"
+    url "https://media.steampowered.com/client/steam_cmd_osx"
     regex(/"version"\s*"([^"]+)"/i)
   end
 

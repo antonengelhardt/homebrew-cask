@@ -1,6 +1,6 @@
 cask "sync" do
-  version "2.2.36"
-  sha256 "394642c32c9788967da57eab64bcdd1ff66c699bc64d5b0e08e19c951fc33cf7"
+  version "2.2.39"
+  sha256 "044470786ec50e92bd114d17ac9f278d4c277aa252df87252ed97f8ade03d0ed"
 
   url "https://www.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
@@ -13,6 +13,8 @@ cask "sync" do
   end
 
   app "Sync.app"
+
+  uninstall quit: "com.sync.desktop"
 
   zap trash: [
         "~/Library/Application Scripts/com.sync.desktop",

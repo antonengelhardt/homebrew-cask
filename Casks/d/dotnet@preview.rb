@@ -2,18 +2,18 @@ cask "dotnet@preview" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "8.0.4,8d8977c0-499c-405a-b687-00e7bca8c783,66057685d4fbdfe80b7b9dd96a47b45a"
-    sha256 "aeb3529bff4a8f245f8cd957171ec813ada88f4d0ea579247e8598d65865df3b"
+    version "9.0.0-preview.5.24306.7,127371ea-846e-4a3a-9f2b-9d9f4058caba,9fdf695f9a388cef6a0af6a92dc18c18"
+    sha256 "25b2d3f3742bc1f764c2f2410096352243f2f3e2da322ab3590cdc47a1da0f54"
   end
   on_intel do
-    version "8.0.4,4f3f1c85-67aa-4b3e-b4d2-951b9f8468ad,d6b7b5f7c5cea4f72417a4738da3d941"
-    sha256 "811b7cc3f751e85d6c880275222097067ea996a300b0ef2f08affbabc4d50463"
+    version "9.0.0-preview.5.24306.7,509552cc-02e8-438f-8c88-dd82b3775550,382bb36a28229b8c5f9798c91822a2b9"
+    sha256 "e6029e17ae042e00f699f0bbb1940461598f8102bf55637793f0fca8ce5a3ae6"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-runtime-#{version.csv.first}-osx-#{arch}.pkg"
   name ".Net Runtime"
   desc "Developer platform"
-  homepage "https://www.microsoft.com/net/core#macos"
+  homepage "https://dotnet.microsoft.com/en-us/"
 
   livecheck do
     url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"

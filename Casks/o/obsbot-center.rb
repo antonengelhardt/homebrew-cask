@@ -1,6 +1,6 @@
 cask "obsbot-center" do
-  version "2.0.8.37"
-  sha256 "4f95bb4f8ec5ca70d56d2906f6503a7a58eb3b0bf7fc77bd4d4e0aa7f151dd9a"
+  version "2.0.9.15"
+  sha256 "885d826d163a2f255aae9c881477ba3cf0a3b63c7aeaad3b0e095bf1c9928e61"
 
   url "https://resource-cdn.obsbothk.com/download/obsbot-center/Obsbot_Center_OA_E_MacOS_#{version}_release.dmg",
       verified: "resource-cdn.obsbothk.com/download/obsbot-center/"

@@ -1,12 +1,12 @@
 cask "obs@beta" do
-  arch arm: "Apple", intel: "Intel"
+  arch arm: "apple", intel: "intel"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "30.1.0-rc1"
-  sha256 arm:   "2a749d1308029a039e4cad6223076d90fa30a86c11e1e1271ac82ae7596624fe",
-         intel: "15af4c79230a18f7e48cb1c2182b97b13b09420130cccf805814cbe77c009c41"
+  version "30.2.0-beta3"
+  sha256 arm:   "7a348c9cba347978e3d75955373e49c09afec979020705044e70cedd0a70dcd7",
+         intel: "9d13ea54145e4501178b4f9963b777b51c2e07992909f92dba79f13d089f9a90"
 
-  url "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-#{version}-macOS-#{arch}.dmg"
+  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/forum/list/test-builds.20/"

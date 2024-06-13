@@ -1,6 +1,6 @@
 cask "macfuse" do
-  version "4.7.1"
-  sha256 "12a4a011c7c6af3ac55d75fff16de8ef97c4e8d9b854b601709ce5316fa87c17"
+  version "4.8.0"
+  sha256 "b9c4f33b6a9d378424a30315bc2dfee298c45636f032c074c4593e6ef431c2d4"
 
   url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/osxfuse/"
@@ -10,7 +10,9 @@ cask "macfuse" do
 
   livecheck do
     url "https://osxfuse.github.io/releases/CurrentRelease.plist"
-    regex(/macfuse[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='Version']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   auto_updates true

@@ -1,5 +1,5 @@
 cask "yandex-cloud-cli" do
-  version "0.123.0"
+  version "0.125.0"
   sha256 :no_check
 
   url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh",
@@ -17,11 +17,7 @@ cask "yandex-cloud-cli" do
 
   installer script: {
     executable: "install.sh",
-    args:       ["-i", "#{staged_path}/#{token}", "-n"],
-  }
-  installer script: {
-    executable: "yandex-cloud-cli/bin/yc",
-    args:       ["components", "post-update"],
+    args:       ["-i", "#{staged_path}/#{token}", "-r", "/dev/null"],
   }
   binary "yandex-cloud-cli/bin/docker-credential-yc"
   binary "yandex-cloud-cli/bin/yc"

@@ -1,15 +1,15 @@
 cask "iterm2@nightly" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3_5_20240508"
-  sha256 "6f5c74b87ae3f953bf9653552708bb8046491646cfc2349e7e7f3fb63c447165"
+  version "3_5_20240613"
+  sha256 "dadff1ac36812dde3fbff0eda258c6228851eb3a0eb2d5a0ee881115d0c94768"
 
-  url "https://www.iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
+  url "https://iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
-  homepage "https://www.iterm2.com/"
+  homepage "https://iterm2.com/"
 
   livecheck do
-    url "https://www.iterm2.com/nightly/latest"
+    url "https://iterm2.com/nightly/latest"
     strategy :header_match
   end
 

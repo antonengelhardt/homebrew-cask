@@ -1,9 +1,9 @@
 cask "sentinel" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.25.1"
-  sha256 arm:   "0d959cc359e9cbfd2e6fb50f43f7a4e7edcf1df4d066cee83711550bf22ce585",
-         intel: "174760d764366a2d7f96b6e7e1dc2733d3f6739c58580691736c326db53c87d5"
+  version "0.26.1"
+  sha256 arm:   "6facbfb121b2d7b9ea1438a06ae1f46ce3cbdae364a2784ab68b2d1d3f1329a4",
+         intel: "a8dfc234b5d65a3d085ac6b99cd32af943db3969163a711c71e3706944afbb6b"
 
   url "https://releases.hashicorp.com/sentinel/#{version}/sentinel_#{version}_darwin_#{arch}.zip"
   name "Sentinel"
